@@ -1,2 +1,2 @@
 # VIS-21
-## VOSTRIKOV A. S.
+## • VOSTRIKOV A. S.
