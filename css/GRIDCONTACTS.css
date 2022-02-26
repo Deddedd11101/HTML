@@ -1,0 +1,40 @@
+.hg-header { grid-area: header; }
+.hg-footer { grid-area: footer; }
+.hg-main { grid-area: main; }
+.hg-left { grid-area: navigation; }
+.hg-right { grid-area: ads; }
+
+
+.hg {
+	display: grid;
+	grid-template-areas: "header header header"
+	                     "navigation main ads"
+	                     "footer footer footer";
+
+	grid-template-columns: 1fr 0fr 400px;
+
+	grid-template-rows: 100px 
+						1fr 
+						60px;
+
+	min-height: 100vh;
+}
+
+
+
+@media screen and (max-width: 1145px) {
+	.hg {
+		grid-template-areas: "header"
+		                     "navigation"
+		                     "main"
+		                     "ads"
+		                     "footer";
+
+		grid-template-columns: 100%;
+		grid-template-rows: 100px 
+							1fr
+							0fr
+							400px 
+							50px;
+	}
+}
