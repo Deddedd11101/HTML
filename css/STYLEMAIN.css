@@ -81,7 +81,8 @@ body {
 	font-family: 'Open Sans';
 }
 .buttons{
-   padding-right: 35px;
+	
+    padding-right: 35px;
     margin: 20px;
    
 }
@@ -125,7 +126,28 @@ p {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+    animation: blinker 0.5s infinite alternate;
+	 
 }
+.blink {
+	animation-name: blinker;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out(1.0,0,0,1.0);
+	animation-duration: 2s;
+	-webkit-animation-name: blinker;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out(1.0,0,0,1.0);
+	-webkit-animation-duration: 2s;
+  }
+  @keyframes blinker {
+	from { background-color: rgb(163, 109, 10); }
+	to { background-color: rgb(130, 12, 209); }
+  }
+   
+  @-webkit-keyframes blinker {
+	from { background-color: rgb(163, 109, 10); }
+	to { background-color: rgb(130, 12, 209); }
+  }
 
 .hg-footer {
 	background-color: rgb(24, 24, 24);
@@ -138,7 +160,10 @@ p {
 	align-items: center;
 }
 
-.hg-left,
+.hg-left{
+	background-color: rgb(179, 179, 179);
+	text-align: center;
+}
 .hg-right {
 	background-color: rgb(179, 179, 179);
 	text-align: center;
